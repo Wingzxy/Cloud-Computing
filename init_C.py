@@ -39,8 +39,8 @@ def create_sqs_queue(queue_name):
 def upload2(zeros, ranges, p_num):
     image_id = 'ami-04b9e92b5572fa0d1'
     instance_type = 't2.micro'
-    keypair_name = 'wing_cloud'
-    GroupName = 'launch-wizard-1'
+    keypair_name = ''
+    GroupName = ''
     instance_number = p_num
     margin = int(2 ** (ranges) / p_num)
     queue_name = 'My_queue'
@@ -53,7 +53,7 @@ def upload2(zeros, ranges, p_num):
         while instance_info[current_range].state['Name'] != 'running':
             instance_info[current_range].load()
         print("all instance are good!")
-        key = paramiko.RSAKey.from_private_key_file("C:/Users/Xingyang Zhou/.ssh/wing_cloud.pem")
+        key = paramiko.RSAKey.from_private_key_file("")
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         ec2 = boto3.resource('ec2')
