@@ -11,6 +11,6 @@ Please fill in the path of key.pem file in upload2 fuction of init_B.py <br>
 Please fill in account credentials details in sqs = boto.client() function of Task.py <br>
 boot.sh is the bash file for EC2 instances to install pip and boto3 SDK <br>
 <br>
-Run python3 extension.py T L to try my extension attempt, it is not correct, but kindly works<br>
+Run python3 extension.py T L to try my extension attempt, it is not fully correct, but kindly works<br>
 <br>
 # Error handle: if return any error, need to terminate all instances and do it again. 
